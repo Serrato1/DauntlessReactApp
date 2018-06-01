@@ -101,7 +101,7 @@ html{
     width:100% ;
 }
 .author-view{
-  background: #2D2D2D;
+  background  :         #414050;
   height:300px;
   font-size:15px;
   /* text-decoration : underline; */
@@ -189,4 +189,110 @@ html{
 .container{
   display:grid;
   grid-template-columns: 80px auto;
+}
+
+
+
+
+
+
+
+
+.add-post{
+  position: fixed;
+  right: 25px;
+  bottom : 25px; 
+  width:80px;
+  height:80px;
+  border-radius: 50%;
+  background : #f2f2f2;
+  color:white;
+  text-align:center;
+  line-height: 2.5;
+  color:black;
+  font-size: 35px;
+
+}
+.add-post:hover{
+  font-size: 50px;
+  line-height:2 ;
+  cursor : pointer;
+}
+
+
+.form-container{
+  width:50%;
+  margin-left:25% ;
+  height:300px;
+  background :  #414050;
+  margin-top:50px;
+  border-radius: 20px;
+  padding: 20px;
+
+}
+.form-container  input {
+  border:none;
+  width:80%;
+  background  :   white ; 
+  border-radius : 10px;
+  font-size: 30px;
+  height: 35px;
+  display:block;
+  margin-left :    10%;
+
+}
+
+
+.form-container  textarea {
+  border:none;
+  height:100px;
+  margin-top:5px;
+  width : 80%;
+  margin-left:               10%;
+  background  :   white ; 
+  border-radius : 5px;
+  font-size: 30px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.add-comment{
+  margin-top:50px;
+  width: 60%;
+  min-height: 300px;
+  height: auto;
+  border-radius: 5px;
+  background:   #2D2D2D  ;
+  margin-left: 20%;
+  font-size:15px;
+  vertical-align:center;
+  transition: .25s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.map{
+  width:50%;
+  height:500px;
+  margin-top:50px;
 }

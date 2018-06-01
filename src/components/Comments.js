@@ -13,8 +13,7 @@ class Comments extends Component {
     .then(response => response.json())
     .then((json) =>{
         let comments = json;
-        console.log(comments);
-        comments    =     comments.map((comment, id) =>{
+        comments = comments.map((comment, id) =>{
                   return(
                     <div className="comment">
                       <div className="user">
@@ -25,7 +24,6 @@ class Comments extends Component {
                       </div>
                     </div>
                   )
-
         })              
         this.setState({
            comments  : comments
@@ -33,14 +31,33 @@ class Comments extends Component {
         console.log(comments);
     })
   }
+  componentWillReceiveProps(nextProps){
+    console.log(nextProps.newComments);
+    let comments = nextProps.newComments;
+    comments = comments.map((comment, id) =>{
+      return(
+        <div className="comment">
+          <div className="user">
+            {comment.email}
+          </div>
+          <div className="content">
+            {comment.body}
+          </div>
+        </div>
+      )
+}) 
+    comments  = [ ...comments, ...this.state.comments];
+    console.log("Comments " , comments );
+    this.setState({
+      comments
+    })
+  }
   render() {
     return (
       <div className="comments-container">
         <div className="title"> Comments </div>
-
-
           {this.state.comments}
-    </div>
+      </div>
     );
   }
 }

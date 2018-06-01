@@ -6,9 +6,7 @@ class PostList extends Component {
     state = {
             postList  : []
     }
-    postClicked = (post)=>{
-        // alert("post clicked");
-    }
+
     componentDidMount(){
         fetch('https://jsonplaceholder.typicode.com/posts')
         .then(response => response.json())
@@ -19,14 +17,16 @@ class PostList extends Component {
                 let authors = data;
                 let posts = json;
                 console.log("authors  " , authors);
-                let postList = posts.map((post,id)=>{
+                console.log("posts from state ", this.state.postList )
+                let postList = [...this.props.postList, ...posts];
+                postList = postList.map((post,id)=>{
                     let authorObj  =  authors[post.userId] !== undefined ? authors[post.userId] : {}   ;  
                     console.log(authorObj); 
-                    post.authorObj = authorObj ;                   
-                    return <Post key={id} post={post} postClicked={this.postClicked}/>
+                    post.authorObj = authorObj ;
+                    return <Post key={id} post={post}/> ; 
                 })
                 this.setState({postList})
-                console.log(posts);
+                console.log("grabbing posts", postList);
             })
 
         })

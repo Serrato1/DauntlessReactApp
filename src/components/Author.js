@@ -3,13 +3,18 @@ import '../styles/App.css';
 import '../styles/granular.css';
 
 import { BrowserRouter as Router, Route  , NavLink , Link } from 'react-router-dom';
+import MapContainer from './Maps.js'
 
 class Author extends Component {
   render() {
-    let {name , phone , username, website} = this.props.location.state;
+    let {name , phone , username, website , address} = this.props.location.state;
+    let geo = address.geo;
+    let {lng, lat} = geo;
+    console.log(geo);
     console.log(name);
     return (
       <div  className="author-view"  >
+        <MapContainer long={lng} lat={lat }   className='map'/>
         <h2 className="" >
             Name : {name}
         </h2>
