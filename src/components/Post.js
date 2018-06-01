@@ -14,7 +14,7 @@ class Post extends Component {
       <div  className="post"  >
           <img src={PostImg}/>
 
-          <Link style={{textAlign:'center' , textDecoration: 'none' , 'color' : 'white' , fontSize : '15px' }} to={{
+          <Link style={{textAlign:'center' , textDecoration: '' , 'color' : 'white' , fontSize : '15px' }} to={{
             pathname : `/posts/${id}`,
             state : {
               post : this.props.post
