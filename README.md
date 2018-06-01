@@ -19,7 +19,7 @@
 * display success notification
 
 
-##Technologies Used
+## Technologies Used
 * React
 * Granular ( CSS library created by Noel Serrato )
 * Google-Maps-React
