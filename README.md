@@ -17,3 +17,11 @@
 * Display Author’s location using google maps
 ## Create “New Post” page where anonymously a user (id:1) can create new post (no image upload) that will be displayed on home page
 * display success notification
+
+
+##Technologies Used
+* React
+* Granular ( CSS library created by Noel Serrato )
+* Google-Maps-React
+* React Router
+* API (https://jsonplaceholder.typicode.com/)
