@@ -1,12 +1,14 @@
 
 html{
-  background: ghostwhite;
+  background:  #1B1B26;
 }
 
 .content-container{
   height:100vh;
-  width:100vw;
+  width:calc(100vw - 80px);
   box-sizing : content-box;
+  background : #1B1B26;
+  margin-left: 80px;
 }
 
 .posts{
@@ -22,7 +24,7 @@ html{
   width:90vw;
   margin-left:5%;
   height:auto;
-  /* background: grey;  */
+  /* background : #1B1B26; */
   color:black;
 }
 
@@ -34,10 +36,11 @@ html{
   width: 300px;
   height:300px;
   border-radius: 5px;
-  background:white;
+  background : #414051;
   margin-left:calc(50%  - 150px);
   font-size:15px;
   vertical-align:center;
+  color:#F9F9FA;
 
   transition: .25s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -79,9 +82,9 @@ html{
 }
 
 .preview{
-  width: 90%;
+  width: 70%;
   height:500px;
-  margin-left : 5%;
+  margin-left : 15%;
   position: relative;
 }
 .preview .title{
@@ -90,15 +93,25 @@ html{
 .preview .content{
   font-size : 20px;
 }
-
 .author{
-  height:25px;
-  font-size:15px;
-  text-decoration : underline;
-  text-align:center;
-  width:100% ;
+    height:15px;
+    font-size:15px;
+    /* text-decoration : underline; */
+    text-align:center;
+    width:100% ;
 }
-
+.author-view{
+  background: #2D2D2D;
+  height:300px;
+  font-size:15px;
+  /* text-decoration : underline; */
+  text-align:center;
+  width:80% ;
+  margin-left:10%;
+  padding:20px;
+  margin-top:50px;
+  border-radius: 10px;
+}
 .preview .author{
   height:25px;
   font-size:20px;
@@ -110,12 +123,12 @@ html{
 
 .comments-container{
   margin-top:50px;
-  width: 300px;
+  width: 60%;
   min-height: 300px;
   height: auto;
   border-radius: 5px;
-  background:white;
-  margin-left:calc(50%  - 150px);
+  background:   #2D2D2D  ;
+  margin-left: 20%;
   font-size:15px;
   vertical-align:center;
   transition: .25s;
@@ -124,6 +137,7 @@ html{
 }
 
 .comments-container .title{
+
   text-align:center;
   margin-top:5px;
   font-size: 30px;
@@ -133,13 +147,13 @@ html{
   width:95%;
   height:200px ;
   /* border :  5px solid black  ; */
-  border-bottom: 10px solid  #1EB8F1;
-  border-top: 10px solid  #1EB8F1;
+  /* border-bottom: 10px solid black; */
+  /* border-top: 10px solid black; */
   margin-bottom:25px;
 
 
 
-  background  :                      ghostwhite ;
+  /* background  :                      ghostwhite ; */
 
   /* background : grey; */
   margin-left: 2.5%;
@@ -149,7 +163,7 @@ html{
 .comment .user{
   text-align:center;
   font-size:20px ;
-  color : black;
+  color : white;
 }
 
 .comment .content{
@@ -159,3 +173,20 @@ html{
 
 
 
+
+
+.left-nav{
+  width:80px;
+  height:100vh;
+  position:fixed;
+  font-size:30px;
+  background: #1B1B26;
+  color:white;
+  box-shadow: 5px 0 5px -5px black;
+  text-decoration:none;
+}
+
+.container{
+  display:grid;
+  grid-template-columns: 80px auto;
+}

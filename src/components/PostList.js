@@ -20,10 +20,10 @@ class PostList extends Component {
                 let posts = json;
                 console.log("authors  " , authors);
                 let postList = posts.map((post,id)=>{
-                        let authorObj  =  authors[post.userId] !== undefined ? authors[post.userId] : {}   ;  
-                        console.log(authorObj); 
-                        post.authorObj = authorObj ;                   
-                   return <Post key={id} post={post} postClicked={this.postClicked}/>
+                    let authorObj  =  authors[post.userId] !== undefined ? authors[post.userId] : {}   ;  
+                    console.log(authorObj); 
+                    post.authorObj = authorObj ;                   
+                    return <Post key={id} post={post} postClicked={this.postClicked}/>
                 })
                 this.setState({postList})
                 console.log(posts);

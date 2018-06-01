@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route  , NavLink , Link } from 'react-router-dom';
 
 import Comments from './Comments';
 import '../styles/App.css';
 import '../styles/granular.css';
+import PostImg from '../post.png'
+
 
 
 class PostPreview extends Component {
@@ -16,9 +19,8 @@ class PostPreview extends Component {
       <div>
 
         <div className="post preview">
-
-            <img src="http://placehold.it/150/771796" />
-
+        
+            <img src  =  {PostImg} />
             <div className  =  "title">
                 {post.title}
             </div>
@@ -28,7 +30,11 @@ class PostPreview extends Component {
             </div>
 
             <div className = "author">
-              {post.authorObj.email}
+              <Link to={
+                {
+                  pathname : `/author/${post.authorObj.email}`,
+                  state : post.authorObj
+                }}  style={{color:'white'}}> {post.authorObj.email}</Link>
             </div>
 
 
